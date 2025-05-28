@@ -23,7 +23,7 @@
 				<li class="mr-lg-4 mr-3 active"><a href="#">Home</a></li>
 				<li class="mr-lg-4 mr-3"><a href="#about">About</a></li>
 				<li class="mr-lg-4 mr-3"><a href="#experience">Experience</a></li>
-				<li class="mr-lg-4 mr-3"><a href="#Education">Project</a></li>
+				<li class="mr-lg-4 mr-3"><a href="#project">Project</a></li>
 				<li><a href="./assets/download/Anagha_Resume.pdf" target="_blank">Resume</a></li>
 				<li><a href="#contact">Contact</a></li>
 				<li><a href="https://github.com/Anagha48" target="_blank"><span class="fa-brands fa-github"></span></a></li>           
@@ -120,42 +120,112 @@
 <!-- home -->
 <section id="about" >
 	<div class="container">
-		<h3 class="heading">ABOUT ME</h3>
+		<h3 class="heading text-center">ABOUT ME</h3>
 		<div class="row py-3">
 			<div class="col-md-5">
 				<img scr="" alt="about image loading">
 			</div>
 			<div class="col-md-7 about-content">
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem mollitia cumque ipsam? Beatae, nihil. Sapiente maxime, minima, aut illum quia ipsa quibusdam eos commodi consequatur nihil debitis numquam eveniet at.</p>
-				<div class="collapse-section">
+		        <div class="collapse-section">
 					<div class="section-title" data-bs-toggle="collapse" data-bs-target="#skillsContent" aria-expanded="false">
 						<span class="heading">Skills</span>
-						<span class="arrow-icon">&#9660;</span>
+						<span class="arrow-icon"><img src="./assets/images/arrow_down.png" class="img-fluid"></span>
+						<!-- <span class="arrow-icon"><img src="./assets/images/arrow_up.png" class="img-fluid"></span> -->
 					</div>
 					<div id="skillsContent" class="collapse section-content">
-						<div>
+						<div class="skill-item">
 							<i class="fa-brands fa-html5"></i>
 							<p>HTML</p>
 						</div>
+						<div class="skill-item">
+							<i class="fa-brands fa-css3"></i>
+							<p>CSS</p>
+						</div>
+						<div class="skill-item">
+							<i class="fa-brands fa-js"></i>
+							<p>Javascript</p>
+						</div>
+						<div class="skill-item">
+							<i class="fa-brands fa-css3"></i>
+							<p>Jquery</p>
+						</div>
+						<div class="skill-item">
+							<i class="fa-brands fa-bootstrap"></i>
+							<p>Bootstrap</p>
+						</div>
+						<div class="skill-item">
+							<i class="fa-brands fa-react"></i>
+							<p>React</p>
+						</div>
+						<div class="skill-item">
+							<i class="fa-brands fa-python"></i>
+							<p>Python</p>
+						</div>
+						<div class="skill-item">
+							<i class="fa-brands fa-css3"></i>
+							<p>Django</p>
+						</div>
+						<div class="skill-item">
+							<i class="fa-solid fa-database"></i>
+							<p>SQL</p>
+						</div>
+
 					</div>
-				</div>
+				</div> 
+
 
 				<div class="collapse-section">
 					<div class="section-title" data-bs-toggle="collapse" data-bs-target="#educationContent" aria-expanded="false">
 						<span class="heading">Education</span>
-						<span class="arrow-icon">&#9660;</span>
+						<span class="arrow-icon"><img src="./assets/images/arrow_down.png"></span>
 					</div>
 					<div id="educationContent" class="collapse section-content">
-						<p>BCA, MCA - Chinmaya Institute of Technology</p>
+						<div class="education-item">
+							<div class="course_name">
+								<i class="fa-solid fa-graduation-cap"></i>
+								<h5>Master of Computer Applications (MCA)</h5>
+							</div>
+							<span class="clg_name">Chinmaya Institute of Technology</span><br/>
+							<span class="">KANNUR UNIVERSITY</span><br/>
+							<span>2022-2024</span>
+						</div>
+						<div class="education-item py-2">
+							<div class="course_name">
+								<i class="fa-solid fa-graduation-cap"></i>
+								<h5>Bachelor of Computer Applications (BCA)</h5>
+							</div>
+							<span class="clg_name">Chinmaya Mission College</span><br/>
+							<span class="">KERALA UNIVERSITY</span><br/>
+							<span>2018-2021</span>
+						</div>
+						<div class="education-item">
+							<div class="course_name">
+								<i class="fa-solid fa-graduation-cap"></i>
+								<h5>Plus Two : Biology Science</h5>
+							</div>
+							<span class="clg_name">GHSS Morazha</span><br/>
+							<span class="">Kerala State Board</span><br/>
+							<span>2016-2018</span>
+						</div>
+						<div class="education-item">
+							<div class="course_name">
+								<i class="fa-solid fa-graduation-cap"></i>
+								<h5>SSLC</h5>
+							</div>
+							<span class="clg_name">GHSS Morazha</span><br/>
+							<span class="">Kerala State Board</span><br/>
+							<span>2015-2016</span>
+						</div>
 					</div>
 				</div>
 
 				<div class="collapse-section">
 					<div class="section-title" data-bs-toggle="collapse" data-bs-target="#achievementContent" aria-expanded="false">
 						<span class="heading">Achievement</span>
-						<span class="arrow-icon">&#9660;</span>
+						<span class="arrow-icon"><img src="./assets/images/arrow_down.png"></span>
 					</div>
-					<div id="educationContent" class="collapse section-content">
+					<div id="achievementContent" class="collapse section-content">
 						 <p>Top performer, Best project award, etc.</p>
 					</div>
 				</div>
@@ -163,6 +233,62 @@
 		</div>
 	</div>
 </section>
+
+<!-- experience -->
+<section id="experience" >
+	<div class="container">
+		<h3 class="heading">EXPERIENCE</h3>
+		<div class="row mt-5">
+			<div class="col-md-6 col-12 ">
+				<div class="card h-100">
+					<span class="heading">Frontend Developer</span>
+					<p class="mt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus itaque, sequi laborum culpa quis ratione ipsa adipisci sed. </p>
+					<a href="#">Read More</a>
+				</div>
+
+			</div>
+			<div class="col-md-6 col-12 ">
+				<div class="card h-100">
+					<span class="heading">Python Fullstack Development Intern</span>
+					<p class="mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, odit iure unde porro ex eum similique, recusandae facere inventore, optio temporibus obcaecati itaque explicabo ipsum alias iste molestias nobis debitis.</p>
+					<a href="#">Read More</a>
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
+<!-- project -->
+<section id="project" >
+	<div class="container">
+		<h3 class="heading">PROJECT</h3>
+		<div class="row mt-5">
+			<div class="col-md-3 col-12 ">
+				<div class="card h-100">
+						<img src="./assets/images/chatapp.svg" class="img-fluid">
+				</div>
+
+			</div>
+			<div class="col-md-3 col-12 ">
+				<div class="card h-100">
+					<img src="./assets/images/chatapp.svg" class="img-fluid">
+				</div>
+			</div>
+					<div class="col-md-3 col-12 ">
+				<div class="card h-100">
+						<img src="./assets/images/chatapp.svg" class="img-fluid">
+				</div>
+
+			</div>
+			<div class="col-md-3 col-12 ">
+				<div class="card h-100">
+					<img src="./assets/images/chatapp.svg" class="img-fluid">
+				</div>
+			</div>
+		</div>
+	</div>
+</section>
+
 
 
 
@@ -229,12 +355,12 @@
 
 
 <!-- footer -->
-<footer class="py-5">
+<footer class="pt-5">
 	<div class="container">
 		
 		<div class="w3layoutsinfo-grids">
 			<div class="w3layouts-grid-left w3layouts-grid-right text-center">
-				<div class="social mb-4">
+				<div class="social">
 					<ul>
 					  
 						<li>

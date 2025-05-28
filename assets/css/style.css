@@ -10,7 +10,9 @@ html {
 	  background:#00030d;
 	  position:relative;
   }
- 
+ section{
+	padding-top: 60px;
+ }
   h1,h2,h3,h4,h5,h6{
 	  margin:0;		  
   }	
@@ -368,10 +370,11 @@ p{
 
   /* about*/
  h3.heading{
-	text-align: center;
+	text-align: left;
     text-transform: uppercase;
 	color: #27B19A;
-	font-size: 20px;
+	font-family: "Aboreto", system-ui;
+	font-size: 25px;
  }
    
   .heading{
@@ -381,10 +384,36 @@ p{
  .about-content{
 	padding: 0 40px;
  }
- #skillsContent div{
-	display: flex;
-	column-gap: 20px;
+ #skillsContent{
+	padding: 10px 20px;
  }
+  #educationContent{
+	padding: 10px 20px;
+ }
+.skill-item {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	opacity: 0;
+	transform: translateY(20px);
+}
+
+.course_name{
+  display: flex;
+  align-items: center;
+  gap: 8px; /* space between icon and text */
+  flex-wrap: wrap; /* allows wrapping on small screens */
+  margin-top: 15px;
+}
+.skill-item i {
+  font-size: 20px;
+}
+
+.skill-item p {
+  margin: 0;
+  font-size: 14px;
+}
+
     .section-title {
       display: flex;
       justify-content: space-between;
@@ -394,26 +423,80 @@ p{
       cursor: pointer;
     }
 	.section-content {
-      padding: 0 1rem 1rem 1rem;
-      border-bottom: 1px solid #555;
-    }
-	.rotate {
-      transform: rotate(180deg);
-      transition: transform 0.3s ease;
+        transition: all 0.5s ease;
     }
 	
-    .collapse:not(.show) {
-      display: none;
-    }
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
    .arrow-icon {
       transition: transform 0.3s ease;
     }
-
+	.arrow-icon img{
+		width: 10px;
+		color: #fff;
+		
+	}
     .section-title:hover {
       border-bottom: 2px solid #00bfff;
     }
+	.education-item{
+		color:#f2f0f0;
+		line-height: 30px;
+		font-size: 16px;
+	}
   /* about*/
  
+
+  /* experience */
+  #experience .card{
+	padding: 30px;
+	height: auto;
+	background-color: #000;
+	border-radius: 6px;
+	box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+	transition: transform 0.3s ease, box-shadow 0.3s ease;
+	position: relative;
+	z-index: 1;
+  }
+  
+
+#experience .card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+  border: 2px solid #27B19A;
+}
+    #experience .card p{
+		font-size: 14px;
+	}
+	 #experience .card a{
+		margin-top: auto;
+		font-size: 14px;
+		margin-top: auto;
+		text-decoration: none;
+		color: #27B19A;
+	 }
+	 	#experience .card:hover a{
+		border-bottom: 2px solid #27B19A;
+	 }
+  /* experience */
+
+/* project */
+#project{
+	padding-bottom: 60px;
+}
+		
+
+
+
   /*--  contact --*/
   .contact-grids {
 	  margin-top: 5em;
@@ -512,7 +595,9 @@ p{
 	  border-radius: 50%;
   }
   footer {
-	  background: #191919;
+	border-top: 1px solid #f2f0f0;
+	  background: #00030d;
+
   }
   .social ul li {
 	  display: inline-block;
