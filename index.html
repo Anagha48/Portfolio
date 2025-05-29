@@ -47,15 +47,16 @@
 				</div>
 				<p> Passionate about building visually stunning, high-performing, and intuitive web experiences.</p>
 				<div class="btn-container mt-4">
-					<button class="btn button1">hire me</button>
-				<button class="btn button2">download CV</button>
+					<a href="#" class="button1">Hire Me</a>
+					<a href="./assets/download/Anagha_Resume.pdf" target="_blank" class="button2">
+						View CV <i class="fa-solid fa-arrow-right"></i>
+					</a>
 				</div>
+
 			</div>
-			<!-- <div class="col-md-5">
-				<div class="img-box">
-					<img src="assets/images/image_1.jpeg" alt="photo">
-				</div>
-			</div> -->		
+			<div class="col-md-4">
+					<img src="assets/images/photo.svg" alt="photo">
+			</div>		
 		
 			<div class="social-icons">
 				<ul>	
@@ -117,15 +118,15 @@
 </script>
 
 		
-<!-- home -->
+<!-- about -->
 <section id="about" >
 	<div class="container">
 		<h3 class="heading text-center">ABOUT ME</h3>
 		<div class="row py-3">
 			<div class="col-md-5">
-				<img scr="" alt="about image loading">
+				<img src="./assets/images/photo1.svg" alt="about image loading">
 			</div>
-			<div class="col-md-7 about-content">
+			<div class="col-md-7 about-content">				
 				<p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem mollitia cumque ipsam? Beatae, nihil. Sapiente maxime, minima, aut illum quia ipsa quibusdam eos commodi consequatur nihil debitis numquam eveniet at.</p>
 		        <div class="collapse-section">
 					<div class="section-title" data-bs-toggle="collapse" data-bs-target="#skillsContent" aria-expanded="false">
@@ -226,7 +227,44 @@
 						<span class="arrow-icon"><img src="./assets/images/arrow_down.png"></span>
 					</div>
 					<div id="achievementContent" class="collapse section-content">
-						 <p>Top performer, Best project award, etc.</p>
+						
+						<div class="achievement-item">
+							<div class="award_name mb-2">
+								<i class="fa-solid fa-award"></i>
+								<h5>React.js Premium Crash Course</h5>	
+							</div>							
+							<span>DECEMBER 2024</span><br/>
+							<span>Completed the "React.js Premium Crash Course", acquiring in-depth knowledge of building dynamic and responsive web applications using React.js.</span><br/>
+							<a href="./assets/download/React.js.pdf" target="_blank">View Certificate</a>
+						</div>
+						<div class="achievement-item pt-2">
+							<div class="award_name mb-2">
+								<i class="fa-solid fa-award"></i>
+								<h5>Work Readiness Program | Additional skill Acquisition Programme (ASAP)</h5>
+							</div>							
+							<span>NOVEMBER 2024</span><br/>
+							<span>Successfully completed the work Readiness Programme conducted by ASAP Kerala in association with KKEM.</span><br/>
+							<a href="./assets/download/certificate_workreadiness.pdf" target="_blank">View Certificate</a>
+						</div>
+						<div class="achievement-item pt-2">
+							<div class="award_name mb-2">
+								<i class="fa-solid fa-award"></i>
+								<h5>Build free website with WordPress</h5>
+							</div>							
+							<span>MARCH 7, 2024</span><br/>
+							<span>Completed a course on "Build Free Website with WordPress", gaining hands-on experience in creating and customizing websites using the WordPress platform.</span><br/>
+							<a href="./assets/download/wordpress.pdf" target="_blank">View Certificate</a>
+						</div>
+						<div class="achievement-item pt-2">
+							<div class="award_name mb-2">
+								<i class="fa-solid fa-award"></i>
+								<h5>MERN Stack Project Course - Build Fullstack React App</h5>
+							</div>					
+							<span>JULY 2023</span><br/>
+							<span>Completed the "MERN Stack Project Course – Build Fullstack React App", gaining practical experience in developing full-stack web applications using MongoDB, Express.js, React.js, and Node.js.</span><br/>
+							<a href="./assets/download/Anagha_Resume.pdf" target="_blank">View Certificate</a>						
+						</div>
+						
 					</div>
 				</div>
 			</div>
@@ -240,18 +278,22 @@
 		<h3 class="heading">EXPERIENCE</h3>
 		<div class="row mt-5">
 			<div class="col-md-6 col-12 ">
-				<div class="card h-100">
+				<div class="card h-100 d-flex flex-column">
 					<span class="heading">Frontend Developer</span>
-					<p class="mt-2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus itaque, sequi laborum culpa quis ratione ipsa adipisci sed. </p>
-					<a href="#">Read More</a>
+					<p class="mt-3 flex-grow-1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Natus itaque, sequi laborum culpa quis ratione ipsa adipisci sed. </p>
+					 <div class="mt-auto">
+						<a href="#">Read More</a>
+					</div>
 				</div>
 
 			</div>
 			<div class="col-md-6 col-12 ">
-				<div class="card h-100">
+				<div class="card h-100 d-flex flex-column">
 					<span class="heading">Python Fullstack Development Intern</span>
-					<p class="mt-2">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, odit iure unde porro ex eum similique, recusandae facere inventore, optio temporibus obcaecati itaque explicabo ipsum alias iste molestias nobis debitis.</p>
-					<a href="#">Read More</a>
+					<p class="mt-3 flex-grow-1">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Illum, odit iure unde porro ex eum similique, recusandae facere inventore, optio temporibus obcaecati itaque explicabo ipsum alias iste molestias nobis debitis.</p>
+					 <div class="mt-auto">
+						<a href="#">Read More</a>
+					</div>
 				</div>
 			</div>
 		</div>
@@ -293,7 +335,7 @@
 
 
 <!-- contact -->
-<!-- <section class="contact py-5" id="contact">
+<section class="contact py-5" id="contact">
 	<div class="container py-3">
 		<h3 class="heading">Contact</h3>
 		<div class="row contact-grids">
@@ -343,7 +385,7 @@
 			</div>
 		</div>
 	</div>
-</section> -->
+</section>
 <!-- //contact -->
 
 

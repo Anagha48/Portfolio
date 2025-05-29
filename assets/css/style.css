@@ -11,7 +11,7 @@ html {
 	  position:relative;
   }
  section{
-	padding-top: 60px;
+	padding-top: 80px;
  }
   h1,h2,h3,h4,h5,h6{
 	  margin:0;		  
@@ -275,19 +275,30 @@ p{
 	min-height: 100vh;
   }
   .banner_info {
-	  padding: 15em 0em 0em;
+	  padding: 6em 0em 0em;
 	  
   }
   .btn-container{
-	column-gap: 20px;
 	display: flex;
+	flex-wrap: wrap;
+	gap: 1rem;
   }
-  .btn-container button{
-	border-radius: 8px;
-	font-weight: 700;
-	padding: 8px 20px;
-	text-transform: capitalize;
-	width: 140px;
+
+  .btn-container a{
+	  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+  padding: 12px 24px;
+  font-weight: 600;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  flex: 1 1 150px;
+  max-width: 150px; 
+  text-align: center;
+  white-space: nowrap;
   }
    .btn-container .button1{
 	background:#27B19A ;
@@ -295,10 +306,76 @@ p{
    }
    .btn-container .button2{
 	background:transparent ;
-	color:#27B19A;
 	border: 1px solid #27B19A;
+	color:#27B19A;
+	text-decoration: none;
    }
- 
+    .button2 i {
+	margin-left: 10px;  
+	display: inline-block;
+ 	 transition: transform 0.3s ease;
+   }
+     .btn-container .button2:hover{
+		color:#000 ;
+	 }
+      .btn-container .button1:hover{
+		background:  #4eb1a0;
+		color: #fff;
+		border: none;
+	  }
+
+
+.button1, .button2 {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 12px 24px;
+  font-size: 16px;
+  border: none;
+  border-radius: 8px;
+  text-decoration: none;
+  color: white;
+  overflow: hidden;
+  z-index: 0;
+  transition: color 0.3s ease;
+}
+
+
+
+/* Create bubbly background effect */
+.button2::before {
+  content: "";
+  position: absolute;
+  left: -100%;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: radial-gradient(circle at center, #4eb1a0 30%, #4eb1a0 100%);
+  transition: left 0.6s ease;
+  z-index: -1;
+  border-radius: 8px;
+}
+
+/* Hover: Animate from left to right */
+.button2:hover::before {
+  left: 0;
+}
+
+/* Hover: text color change */
+.button2:hover {
+  color:#000;
+}
+
+/* Optional: reverse animation when mouse leaves */
+.button2:active::before {
+  transition: left 0.4s ease;
+  left: 100%;
+
+}
+.button2:hover i {
+  transform: rotate(-45deg);
+}
   .banner_info h3 {
 	font-family: "Aboreto", system-ui;
 	  font-size: 60px;
@@ -381,6 +458,11 @@ p{
 	color: #F2F0F0;
 	font-size: 18px;
   }
+  #experience .heading{
+	color: #F2F0F0;
+	font-size: 22px ;
+  }
+
  .about-content{
 	padding: 0 40px;
  }
@@ -390,6 +472,16 @@ p{
   #educationContent{
 	padding: 10px 20px;
  }
+ #achievementContent{
+	padding: 10px 20px;
+ }
+ .award_name{
+  display: flex;
+  align-items: center;
+  gap: 10px; /* space between icon and text */
+  /* flex-wrap: wrap; */
+  margin-top: 15px;
+}
 .skill-item {
 	display: flex;
 	align-items: center;
@@ -397,7 +489,9 @@ p{
 	opacity: 0;
 	transform: translateY(20px);
 }
-
+.award_name i{
+	font-size: 22px;
+}
 .course_name{
   display: flex;
   align-items: center;
@@ -452,6 +546,15 @@ p{
 		line-height: 30px;
 		font-size: 16px;
 	}
+	.achievement-item{
+		color:#f2f0f0;
+		line-height: 30px;
+		font-size: 16px;
+	}
+	.achievement-item a{
+		color: #00bfff;
+		text-decoration: none;
+	}
   /* about*/
  
 
@@ -490,9 +593,7 @@ p{
   /* experience */
 
 /* project */
-#project{
-	padding-bottom: 60px;
-}
+
 		
 
 
@@ -532,7 +633,7 @@ p{
 	  border: 5px solid #eee;
   }
   .icon span {
-	  color:#27B19A;
+	  color:#27b19a;
   }
   .contact-right input[type="text"], .contact-right input[type="email"], .contact-right textarea {
 	  outline: none;
