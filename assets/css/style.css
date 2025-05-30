@@ -7,7 +7,7 @@ html {
   body{
 	  padding:0;
 	  margin:0;
-	  background:#00030d;
+	  background:#00030d !important;
 	  position:relative;
   }
  section{
@@ -310,8 +310,12 @@ p{
 	color:#27B19A;
 	text-decoration: none;
    }
+   .button2{
+	display: flex;
+	gap:15px;
+   }
     .button2 i {
-	margin-left: 10px;  
+	/* margin-left: 10px;   */
 	display: inline-block;
  	 transition: transform 0.3s ease;
    }
@@ -906,12 +910,29 @@ p{
 		  color: #333;
 	  }
   }
-  @media(max-width: 736px) {
+  @media(max-width: 767px) {
 	  .image_margin {
 		  width:60%;
 		  margin: 0 auto;
 		  margin-top: 2em;
 	  }
+	  .social-icons {
+		display: none;
+	  }
+	  #about .frame{
+		display: none;
+	  }
+	.banner {
+        min-height: auto;
+    }
+}
+#about h3.heading{
+	text-align: left !important;
+}
+	  .frame{
+		margin-top: 40px;
+	  }
+
 	  .exp,.exp1{
 		  padding-right: 0;
 		  padding: 1em;
@@ -929,15 +950,19 @@ p{
 		  float: none;
 	  }
 	  h3.heading {
-		  font-size: 35px;
+		  font-size: 35px !important;
 		  letter-spacing: 3px;
 	  }
   
-  }
-  @media(max-width:640px) {
+  
+  @media(max-width:767px) {
 	  .banner_info h2 {
 		  font-size: 45px;
 		  letter-spacing: 1px;
+	  }
+	  section{
+		padding-left: 1rem;
+		padding-right: 1rem;
 	  }
   
   }
@@ -972,14 +997,18 @@ p{
 		  width: 32%;
 		  font-size: 15px;
 	  }
+	  .banner_info h3 {
+		font-size: 50px;
+	  }
   }
-  @media(max-width: 414px) {
+  @media(max-width: 480px) {
 	  .banner_info h2 {
-		  font-size: 42px;
+		  font-size: 25px;
 		  letter-spacing: 0px;
 	  }
 	  h3.heading {
 		  font-size: 35px;
+
 	  }
 	  .contact label {
 		  width: 100%;
@@ -998,10 +1027,8 @@ p{
 		  min-height: 550px;
 	  } */
   }
-  @media(max-width:384px) {
-	  .banner_info h2 {
-		  font-size: 35px;
-	  }
+  @media(max-width:480px) {
+
 	  .test-review p {
 		  padding-left: 25px;
 	  }
