@@ -31,9 +31,9 @@ p{
   label{
 	  margin:0;
   }
-  img{
+  /* img{
 	  width:100%;
-  }
+  } */
   
   header {
 	  position: absolute;
@@ -88,6 +88,7 @@ p{
 }
 .menu li a{
     margin-right: 25px; /* Adjust spacing between menu items */
+	text-decoration: none;
 }
   
   nav ul li ul li:hover { background: #f8f9fa; }
@@ -191,8 +192,8 @@ p{
 	  [id^=drop]:checked + ul {
 		  display: block;
 		  background: #fff;
-		  padding: 15px 0;
-		  text-align: center;
+		  padding: 15px;
+		  text-align: left;
 	  }
   
 	  /* Change menu item's width to 100% */
@@ -453,6 +454,22 @@ p{
 	height: 350px;
 	object-fit: cover;
   }
+  .frame::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+           background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+            transform: scale(0); /* Start as a point (0x0) */
+            transform-origin: top left; /* Scale from top-left corner */
+            transition: transform 0.5s ease-in-out; /* Smooth transition */
+				border-radius: 40px 0px 100px 0;
+  }
+        .frame:hover::before {
+           transform: scale(1); /* Expand to full size */
+        }
   /*-- // banner --*/
  
 
@@ -494,13 +511,13 @@ p{
   /* flex-wrap: wrap; */
   margin-top: 15px;
 }
-.skill-item {
+/* .skill-item {
 	display: flex;
 	align-items: center;
 	gap: 8px;
 	opacity: 0;
 	transform: translateY(20px);
-}
+} */
 .award_name i{
 	font-size: 22px;
 }
@@ -591,7 +608,7 @@ p{
  
 
   /* experience */
-  #experience .card{
+  #experience .experience-item{
 	padding: 30px;
 	height: auto;
 	background-color: #000;
@@ -601,18 +618,22 @@ p{
 	position: relative;
 	z-index: 1;
   }
+  .experience-item h3{
+	color: #fff;
+	font-family: "Raleway", sans-serif;
+  }
   
 
-#experience .card:hover {
+#experience .experience-item:hover {
   transform: scale(1.05);
   box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
   z-index: 10;
   border: 2px solid #27B19A;
 }
-    #experience .card p{
+    #experience p{
 		font-size: 14px;
 	}
-	 #experience .card a{
+	 #experience a{
 		margin-top: auto;
 		font-size: 16px;
 		margin-top: auto;
@@ -622,6 +643,47 @@ p{
 	 	#experience .card:hover a{
 		border-bottom: 2px solid #27B19A;
 	 }
+.details {
+    display: none; /* Hide details by default */
+    margin-top: 10px;
+    padding: 10px;
+    border-left: 3px solid#27B19A;
+  }
+
+    .animate-up {
+        animation: slideUp 0.5s ease forwards;
+    }
+    
+    @keyframes slideUp {
+        from {
+            opacity: 0;
+            transform: translateY(20px);
+        }
+        to {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+
+    .arrow-icon img {
+        transition: transform 0.3s ease;
+    }
+    
+    .section-title[aria-expanded="true"] .arrow-icon img {
+        transform: rotate(180deg);
+    }
+
+    .skill-item .items,
+    .education-item,
+    .achievement-item {
+        margin-bottom: 15px;
+        opacity: 0; /* Start hidden for animation */
+    }
+	  .section-content.show-animate .skill-item .items,
+    .section-content.show-animate .education-item,
+    .section-content.show-animate .achievement-item {
+        opacity: 1; /* Fully visible after animation */
+    }
   /* experience */
 
 /* project */
@@ -630,7 +692,22 @@ p{
 }
 .card-img-top{
 	height: 280px;
-}	
+  position: relative;
+  overflow: hidden;
+}
+
+.card-overlay-text {
+  position: absolute;
+  top: 10px;
+  left: 50%;
+  top: 50%;
+  transform: translateX(-50%);
+  color: white;
+  font-size: 14px;
+  border-radius: 4px;
+  z-index: 1;
+}
+
 
 
   /*--  contact --*/
@@ -925,12 +1002,16 @@ p{
 	.banner {
         min-height: auto;
     }
-}
-#about h3.heading{
+	#about h3.heading{
 	text-align: left !important;
 }
+}
+
 	  .frame{
 		margin-top: 40px;
+		position: relative;
+            display: inline-block;
+            overflow: hidden;
 	  }
 
 	  .exp,.exp1{
@@ -950,7 +1031,7 @@ p{
 		  float: none;
 	  }
 	  h3.heading {
-		  font-size: 35px !important;
+		  font-size: 30px !important;
 		  letter-spacing: 3px;
 	  }
   
@@ -1070,6 +1151,34 @@ p{
 }
 
 
+ #splash-screen {
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%;
+	 height: 100%;
+    background: #00030d;
+    color:#27B19A;	
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+	font-family: "Aboreto", system-ui;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 1s ease; /* Changed to 2s */
+  }
 
+  #splash-screen.hide {
+    opacity: 0;
+    pointer-events: none;
+  }
 
+  #name span {
+    opacity: 1;
+    transition: opacity 0.5s ease;
+    display: inline-block;
+  }
 
+  #name span.fade-out {
+    opacity: 0;
+  }
