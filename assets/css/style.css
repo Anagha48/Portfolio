@@ -452,11 +452,12 @@ p{
 	height: auto;
   }
   .frame img{
-	border-radius: 40px 0px 100px 0;
+	/* border-radius: 40px 0px 100px 0; */
     width: 100%;
     max-height: 400px;
     background-size: cover;
     object-fit: cover;
+	margin-top: 25px;
   }
   /* .frame::before {
             content: '';
