@@ -5,6 +5,21 @@ html {
 	scroll-behavior: smooth;
   }
 
+*::-webkit-scrollbar {
+  /* height: 10px; */
+  width: 10px;
+}
+*::-webkit-scrollbar-track {
+  border-radius: 5px;
+  background-color: #DFE9EB;
+}
+
+
+*::-webkit-scrollbar-thumb {
+  border-radius: 5px;
+  background-color:  #27B19A;
+}
+
   body{
 	  padding:0;
 	  margin:0;
@@ -42,7 +57,7 @@ p{
     background: linear-gradient(to right,#fff , #27B19A);
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
-    background-clip: text; /* for Firefox */
+    background-clip: text; 
     font-family: "Aboreto", system-ui;
     font-size: 20px;
     font-weight: 700;
@@ -72,9 +87,9 @@ p{
 	  clear:both;
   }
   nav ul {
-	float: none; /* Remove right float */
+	float: none; 
     display: flex;
-    justify-content: flex-start; /* Align items to the left */
+    justify-content: flex-start; 
     align-items: center;
 	  }
 
@@ -97,18 +112,17 @@ p{
   }
   .menu {
     display: flex;
-    justify-content: flex-end; /* Align menu items to the left */
+    justify-content: flex-end;
     list-style: none;
     padding: 10px;
 }
 .menu li a{
-    margin-right: 25px; /* Adjust spacing between menu items */
+    margin-right: 25px;
 	text-decoration: none;
 }
   
   nav ul li ul li:hover { background: #f8f9fa; }
-  
-  /* Background color change on Hover */
+
   nav a:hover { 
 	  color: #27B19A;	
  }
@@ -517,7 +531,7 @@ p{
 	height: auto;
   }
   .frame img{
-	/* border-radius: 40px 0px 100px 0; */
+	border-radius: 40px 0px 100px 0;
     width: 90%;
     max-height: 450px;
     background-size: cover;
@@ -735,20 +749,23 @@ p{
   z-index: 10;
   border: 2px solid #27B19A;
 }
-    #experience p{
-		font-size: 14px;
-	}
-	 #experience a{
-		font-size: 16px;
-		margin-top: auto;
-		text-decoration: none;
-		  margin-top: auto;
-		color: #27B19A;
-		text-decoration:solid;
-	 }
-	 	#experience .card:hover a{
-		border-bottom: 2px solid #27B19A;
-	 }
+#experience p{
+	font-size: 14px;
+}
+#experience a{
+	font-size: 16px;
+	margin-top: auto;
+	text-decoration: none;
+	margin-top: auto;
+	color: #27B19A;
+	text-decoration:solid;
+	margin-top: auto;
+	border-bottom: 2px solid  #0ff; 
+	max-width: 80px;
+}
+#experience .card:hover a{
+	border-bottom: 2px solid #27B19A;
+}
 .details {
   display: none;
   max-height: 0;
@@ -759,21 +776,18 @@ p{
   padding: 0 10px;
   border-left: 3px solid #27B19A;
 }
-
 .details.open {
   display: block;
   max-height: 1000px;
   opacity: 1;
   padding: 10px;
 }
-
-
 .details.showing {
   display: block;
 }
 
 .details.visible {
-  max-height: 1000px; /* Make sure this is enough for any content */
+  max-height: 1000px;
   opacity: 1;
 }
 
@@ -792,11 +806,6 @@ p{
   background-color: #000; /* Optional: dark background */
 }
 
-.experience-item .read-more-link {
-  margin-top: auto;
-  color: #0ff; /* or any color you prefer */
-  text-decoration: none;
-}
 
 .experience-item ul,
 .experience-item p {
