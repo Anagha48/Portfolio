@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100..900;1,100..900&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Aboreto&display=swap');
+
 html {
 	scroll-behavior: smooth;
   }
@@ -31,9 +32,6 @@ p{
   label{
 	  margin:0;
   }
-  /* img{
-	  width:100%;
-  } */
   #logo {
     float: left;
     font-size: 24px;
@@ -64,7 +62,6 @@ p{
 	  display: none;
   }
   
-  /* Giving a background-color to the nav container. */
   nav { 
 	  margin:0;
 	  padding: 0;
@@ -753,11 +750,33 @@ p{
 		border-bottom: 2px solid #27B19A;
 	 }
 .details {
-    display: none; /* Hide details by default */
-    margin-top: 10px;
-    padding: 10px;
-    border-left: 3px solid#27B19A;
-  }
+  display: none;
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease, opacity 0.4s ease;
+  margin-top: 10px;
+  padding: 0 10px;
+  border-left: 3px solid #27B19A;
+}
+
+.details.open {
+  display: block;
+  max-height: 1000px;
+  opacity: 1;
+  padding: 10px;
+}
+
+
+.details.showing {
+  display: block;
+}
+
+.details.visible {
+  max-height: 1000px; /* Make sure this is enough for any content */
+  opacity: 1;
+}
+
 
 
     .animate-up {
@@ -782,6 +801,9 @@ p{
 .experience-item ul,
 .experience-item p {
   margin-bottom: 10px;
+  color: #fff;
+  line-height: 30px;
+      font-size: 14px;
 }
 
     
@@ -927,7 +949,7 @@ p{
   }
   .contact-right button[type="submit"] {
 	  padding: 11px 35px;
-	  color: #fff;
+	  color: #27B19A;
 	  background: transparent;
 	  border: 2px solid #27B19A;
 	  font-weight: 600;
@@ -1002,12 +1024,23 @@ p{
 	  -o-transition: 0.5s all;
 	  -ms-transition: 0.5s all;
   }
-  .social ul li a i:hover {
+   .social ul li {
+  display: inline-block;
+  margin: 0 3px;
+}
+  .social ul li a span:hover{
+
+	color: #27B19A;
+	border-radius: 50%;
+	border:1px solid  #27B19A;
+	  transform: scale(1.2);
+  }
+  /* .social ul li a i:hover {
 	  background: #fff;
 	  color: #333;
 	  border: 1px solid #fff;
-  }
-  .copyright p,.copyright p a{
+  } */
+  /* .copyright p,.copyright p a{
 	  color: #999;
 	  font-size: 15px;
 	  margin: 0;
@@ -1016,7 +1049,7 @@ p{
   }
   .copyright a:hover {
 	  color: #fff;
-  }
+  } */
   /*-- //footer --*/
   @media(max-width:1080px) {
 	  .banner-layer,.banner {

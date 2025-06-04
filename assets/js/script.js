@@ -39,21 +39,47 @@
 
 
 
+document.addEventListener('DOMContentLoaded', () => {
+  const links = document.querySelectorAll('.read-more-link');
 
+  links.forEach(link => {
+    link.addEventListener('click', function (e) {
+      e.preventDefault();
+      const targetId = this.getAttribute('data-target');
+      const currentDetails = document.getElementById(targetId);
+      const isVisible = currentDetails.classList.contains('visible');
 
-  document.querySelectorAll('.read-more-link').forEach(link => {
-    link.addEventListener('click', function (event) {
-      event.preventDefault(); // Prevent default link behavior
-      const targetId = this.getAttribute('data-target'); // Get the target details ID
-      const details = document.getElementById(targetId); // Find the details element
-      const isHidden = details.style.display === 'none' || details.style.display === '';
+      // Close ALL other details
+      document.querySelectorAll('.details').forEach(detail => {
+        if (detail !== currentDetails) {
+          detail.classList.remove('visible');
+          detail.classList.remove('showing'); // Forcefully collapse
+          const otherLink = document.querySelector(`.read-more-link[data-target="${detail.id}"]`);
+          if (otherLink) otherLink.textContent = 'Read More';
+        }
+      });
 
-      // Toggle visibility
-      details.style.display = isHidden ? 'block' : 'none';
-      // Update link text
-      this.textContent = isHidden ? 'Read Less' : 'Read More';
+      // Toggle current one
+      if (!isVisible) {
+        currentDetails.classList.add('showing');
+        setTimeout(() => {
+          currentDetails.classList.add('visible');
+        }, 10);
+        this.textContent = 'Read Less';
+      } else {
+        currentDetails.classList.remove('visible');
+        setTimeout(() => {
+          currentDetails.classList.remove('showing');
+        }, 500); // Wait for animation to finish
+        this.textContent = 'Read More';
+      }
     });
   });
+});
+
+
+
+
 
   document.querySelectorAll('.read-more-link').forEach(button => {
     button.addEventListener('click', function () {
