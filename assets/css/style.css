@@ -513,7 +513,7 @@ p{
 	height: 500px;
   }
   .frame {
-	width: 350px;
+	width: 100%;
 	height: auto;
   }
   .frame img{
@@ -1085,9 +1085,9 @@ p{
 		  font-size: 50px;
 		  letter-spacing: 1px;
 	  }		
-	  /* .banner-content {
-		  padding: 12em 0em 0em;
-	  } */
+	  #logo{
+		display: none;
+	}
 	  ul.navbar-nav.ml-lg-auto.text-center {
 		  padding: 1em;
 		  background: rgba(0, 0, 0, 0.7);
@@ -1186,6 +1186,7 @@ p{
 	  }
   }
   @media(max-width: 767px) {
+	
 	  .image_margin {
 		  width:60%;
 		  margin: 0 auto;
