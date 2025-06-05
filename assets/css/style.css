@@ -576,6 +576,7 @@ p{
 	
   }
 
+
  .about-content{
 	padding: 0 30px;
  }
@@ -801,9 +802,7 @@ p{
   flex-direction: column;
   justify-content: space-between;
   padding: 20px;
-  border: 1px solid #0ff; /* Optional: style as needed */
   height: 100%;
-  background-color: #000; /* Optional: dark background */
 }
 
 
@@ -851,6 +850,9 @@ p{
 /* project */
 #project img{
 	border-radius: 8px;
+}
+#project .card{
+	background: #00030d;
 }
 .card-img-top{
 	/* height: 280px; */
@@ -1201,6 +1203,9 @@ p{
 		  margin: 0 auto;
 		  margin-top: 2em;
 	  }
+	    #experience .col-12{
+	max-height: 400px;
+  }
 	  .social-icons {
 		display: none;
 	  }
@@ -1252,6 +1257,9 @@ p{
 	  section{
 		padding-left: 1rem;
 		padding-right: 1rem;
+	  }
+	  #project .card{
+		max-height: 350px;
 	  }
   
   }
