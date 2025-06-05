@@ -25,6 +25,7 @@ html {
 	  margin:0;
 	  background:#00030d !important;
 	  position:relative;
+	  overflow-x: hidden;
   }
  section{
 	padding-top: 80px;
@@ -334,6 +335,13 @@ p{
 	background:#27B19A ;
 	color:#000000;
    }
+
+      .btn-container .button1:hover{
+	    background:  transparent;
+		color: #fff;
+		 box-shadow: inset 0 0 15px #27B19A;
+		border: 1px solid #27B19A;;
+   }
    .btn-container .button2{
 	background:transparent ;
 	border: 1px solid #27B19A;
@@ -352,11 +360,7 @@ p{
      .btn-container .button2:hover{
 		color:#000 ;
 	 }
-      .btn-container .button1:hover{
-		background:  #4eb1a0;
-		color: #fff;
-		border: none;
-	  }
+		
 
 
 .button1, .button2 {
@@ -385,7 +389,7 @@ p{
   top: 0;
   width: 100%;
   height: 100%;
-  background: radial-gradient(circle at center, #4eb1a0 30%, #4eb1a0 100%);
+  background: radial-gradient(circle at center,  #27B19A 30%, #27B19A 100%);
   transition: left 0.6s ease;
   z-index: -1;
   border-radius: 8px;
@@ -423,36 +427,6 @@ p{
   transition: color 0.3s ease;
 }
 
-/* Bubbly background effect */
-.btn-submit::before {
-  content: "";
-  position: absolute;
-  left: -100%;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: radial-gradient(circle at center, #4eb1a0 30%, #4eb1a0 100%);
-  transition: left 0.6s ease;
-  z-index: -1;
-  border-radius: 8px;
-}
-
-/* Hover: Animate background left to right */
-.btn-submit:hover::before {
-  left: 0;
-}
-
-/* Hover: Change text color */
-.btn-submit:hover {
-  color: #000;
-}
-
-/* Active (click): Reverse animation */
-.btn-submit:active::before {
-  transition: left 0.6s ease;
-  left: 100%;
-}
-
   .banner_info h3 {
 	font-family: "Aboreto", system-ui;
 	  font-size: 60px;
@@ -482,12 +456,6 @@ p{
 	  
   
 
-/* Optional: reverse animation when mouse leaves */
-.btn-submit:active::before {
-  transition: left 0.4s ease;
-  left: 100%;
-
-}
 	.banner_info p{
 		
 		margin: 2em 0;
@@ -538,23 +506,7 @@ p{
     object-fit: cover;
 	margin-top: 25px;
   }
-  /* .frame::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-           background: rgba(0, 0, 0, 0.6); 
-            transform: scale(0);
-            transform-origin: top left;
-            transition: transform 0.5s ease-in-out; 
-				border-radius: 40px 0px 100px 0;
-  }
-        .frame:hover::before {
-           transform: scale(1);
-        } */
-  /*-- // banner --*/
+
  
 
   /* about*/
@@ -651,7 +603,7 @@ p{
 		
 	}
     .section-title:hover {
-      border-bottom: 2px solid #00bfff;
+      border-bottom: 2px solid  #27B19A;
     }
 	.education-item{
 		color:#f2f0f0;
@@ -720,7 +672,7 @@ p{
 }
 .items p {
   margin: 0;
-  font-size: 18px; /* optional */
+  font-size: 14px; /* optional */
 }
 .course_name i{
  font-size:18px;
@@ -761,7 +713,7 @@ p{
 	color: #27B19A;
 	text-decoration:solid;
 	margin-top: auto;
-	border-bottom: 2px solid  #0ff; 
+	border-bottom: 2px solid  #27B19A; 
 	max-width: 80px;
 }
 #experience .card:hover a{
@@ -843,7 +795,7 @@ p{
 	  .section-content.show-animate .skill-item .items,
     .section-content.show-animate .education-item,
     .section-content.show-animate .achievement-item {
-        opacity: 1; /* Fully visible after animation */
+        opacity: 1; 
     }
   /* experience */
 
@@ -855,7 +807,6 @@ p{
 	background: #00030d;
 }
 .card-img-top{
-	/* height: 280px; */
   position: relative;
   overflow: hidden;
 }
@@ -943,7 +894,7 @@ p{
 	  border: 5px solid #eee;
   }
   .icon span {
-	  color:#27b19a;
+	  color: #27B19A;
   }
   .contact-right input[type="text"], .contact-right input[type="email"], .contact-right textarea {
 	  outline: none;
@@ -976,10 +927,11 @@ p{
 	  cursor: pointer;
   }
   .contact-right button[type="submit"]:hover {
-	   background:  #4eb1a0;
+		background:  transparent;
 		color: #fff;
-		border: none;
-  }
+		 box-shadow: inset 0 0 10px #27B19A;
+		border: 1px solid  #27B19A;
+	  }
   .contact label {
 	  width: 17%;
 	  float: left;
@@ -1046,21 +998,7 @@ p{
 	border:1px solid  #27B19A;
 	  transform: scale(1.2);
   }
-  /* .social ul li a i:hover {
-	  background: #fff;
-	  color: #333;
-	  border: 1px solid #fff;
-  } */
-  /* .copyright p,.copyright p a{
-	  color: #999;
-	  font-size: 15px;
-	  margin: 0;
-	  letter-spacing: 1px;
-	  line-height: 28px;
-  }
-  .copyright a:hover {
-	  color: #fff;
-  } */
+  
   /*-- //footer --*/
   @media(max-width:1080px) {
 	  .banner-layer,.banner {
@@ -1143,9 +1081,6 @@ p{
 		  margin-top: 12em;
 		  padding: 0;
 	  }
-	  /* .banner-layer, .banner {
-		  min-height: 590px;
-	  } */
 	  .exp {
 		  padding-right: 2em;
 	  }
@@ -1160,9 +1095,7 @@ p{
 	  }
   }
   @media(max-width:768px) {
-	  /* .banner-content {
-		  padding: 10em 0em 0em;
-	  } */
+
 	  .image_margin {
 		  margin-top: 10em;
 	  }
@@ -1264,9 +1197,7 @@ p{
   
   }
   @media(max-width:568px) {
-	  /* .banner-content {
-		  padding: 10em 2em 0em;
-	  } */
+
 	  .w3-icon-grid1 p {
 		  margin: 1.5em 0 1em;
 	  }
@@ -1398,3 +1329,17 @@ p{
   #name span.fade-out {
     opacity: 0;
   }
+
+
+    .ball {
+      position: absolute;
+      width: 20px;
+      height: 20px;
+      background-color:#27B19A;
+      border-radius: 50%;
+      pointer-events: none;
+      transform: translate(-50%, -50%);
+      transition: transform 0.05s linear;
+    }
+
+	
