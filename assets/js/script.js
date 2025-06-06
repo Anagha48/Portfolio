@@ -214,7 +214,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 // bubble mouse move//
-   const ball = document.getElementById('ball');
-    document.addEventListener('mousemove', (e) => {
-      ball.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
-    });
+const ball = document.getElementById('ball');
+document.addEventListener('mousemove', (e) => {
+  const offsetX = -10; // half of width
+  const offsetY = -10; // half of height
+  ball.style.transform = `translate(${e.clientX + offsetX}px, ${e.clientY + offsetY}px)`;
+});
