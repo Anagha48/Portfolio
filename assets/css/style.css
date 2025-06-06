@@ -311,7 +311,7 @@ p{
   }
   .btn-container{
 	display: flex;
-	flex-wrap: wrap;
+	/* flex-wrap: wrap; */
 	gap: 1rem;
   }
 
@@ -456,12 +456,7 @@ p{
 	  
   
 
-	.banner_info p{
-		
-		margin: 2em 0;
-		width: 80%;
 	
-	}
 	.social-icons{
 		border: 1px solid #27B19A;
 		padding: 20px 10px;
@@ -1022,6 +1017,13 @@ p{
 		  width: 81%;
 	  }
   }
+
+  @media (min-width:767px){
+	.banner_info p{
+		margin: 2em 0;
+		width: 80%;
+	}
+  }
   @media(max-width: 991px) {
 	  .navbar-light .navbar-toggler {
 		  border-color: #fff;
@@ -1130,6 +1132,9 @@ p{
 	  }
   }
   @media(max-width: 767px) {
+	 .frame img{
+    max-height: 350px;
+  }
 	
 	  .image_margin {
 		  width:60%;
@@ -1213,6 +1218,9 @@ p{
 	  }
   }
   @media(max-width: 480px) {
+	    .frame img {
+        max-height: 360px;
+    }
 	  .navbar-light .navbar-nav .show > .nav-link, .navbar-light .navbar-nav .active > .nav-link, .navbar-light .navbar-nav .nav-link.show, .navbar-light .navbar-nav .nav-link.active {
 		  width: 40%;
 		  margin: 0 auto;
