@@ -39,7 +39,7 @@ p{
 	font-size: 16px;
 	line-height: 35px;
 	letter-spacing: 1px;
-	font-size: 14px;
+	font-size: 16px;
 }
   ul{
 	  margin:0;
@@ -566,7 +566,7 @@ p{
 
 .skill-item p {
   margin: 0;
-  font-size: 14px;
+  font-size: 16px;
 }
 
     .section-title {
@@ -672,7 +672,7 @@ p{
 }
 .items p {
   margin: 0;
-  font-size: 14px; /* optional */
+  font-size: 16px; /* optional */
 }
 .course_name i{
  font-size:18px;
@@ -703,7 +703,7 @@ p{
   border: 2px solid #27B19A;
 }
 #experience p{
-	font-size: 14px;
+	font-size: 16px;
 }
 #experience a{
 	font-size: 16px;
@@ -763,7 +763,7 @@ p{
   margin-bottom: 10px;
   color: #fff;
   line-height: 30px;
-      font-size: 14px;
+      /* font-size: 14px; */
 }
 
     
@@ -1331,15 +1331,15 @@ p{
   }
 
 
-    .ball {
-      position: absolute;
-      width: 20px;
-      height: 20px;
-      background-color:#27B19A;
-      border-radius: 50%;
-      pointer-events: none;
-      transform: translate(-50%, -50%);
-      transition: transform 0.05s linear;
-    }
-
-	
+  .ball {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background-color: #27B19A;
+  border-radius: 50%;
+  pointer-events: none; /* allows clicking through the ball */
+  z-index: 9999;
+  transition: transform 0.05s linear;
+}
