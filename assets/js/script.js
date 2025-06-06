@@ -213,10 +213,8 @@ document.addEventListener('DOMContentLoaded', function() {
 });
 
 
-
 // bubble mouse move//
    const ball = document.getElementById('ball');
-
     document.addEventListener('mousemove', (e) => {
       ball.style.transform = `translate(${e.clientX}px, ${e.clientY}px)`;
     });
