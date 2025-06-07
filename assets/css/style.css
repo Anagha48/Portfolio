@@ -55,7 +55,7 @@ p{
     padding: 10px 20px;
 }
 .logo-text {
-    background: linear-gradient(to right,#fff , #27B19A);
+    background:  #27B19A;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     background-clip: text; 
@@ -1350,4 +1350,17 @@ p{
   pointer-events: none; /* allows clicking through the ball */
   z-index: 9999;
   transition: transform 0.05s linear;
+}
+
+
+/* Animate on scroll */
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 1s ease-out, transform 1s ease-out;
+}
+
+.animate-on-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
